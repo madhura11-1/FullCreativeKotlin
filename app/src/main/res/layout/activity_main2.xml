@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
-    android:orientation="vertical"
     >
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
 
     // Frame Layout is mostly used to block the screen area for that specified item only
     // coz here items stack one upon each other
     // mostly image display
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#BAAFE4">
 
     <TextView
+        android:id="@+id/testtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Hello"
+        android:text="@string/views_and_layouts"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Hello All and im second"/>
 
     </FrameLayout>
 
     <TextView
+        android:id="@+id/testtext1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="In the linear layout"/>
+        android:layout_weight="1"
+        android:background="#B4A6ED"/>
 
     <TextView
+        android:id="@+id/testtext2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="In the llinear layout second text view"/>
+        android:layout_weight="1"
+        android:background="#A897EF" />
 
 
     // It coordinates the animations and transitions of child views with one another
@@ -62,8 +68,11 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="3">
+        android:columnCount="3"
+        android:rowCount="1"
+        android:background="#8F75F6"
+        android:layout_weight="1"
+        >
 
         <Button
             android:id="@+id/imageButton1"
@@ -71,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="button1"
+            android:layout_columnWeight="1"
             />
 
         <Button
@@ -79,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="button2"
+            android:layout_columnWeight="1"
             />
 
         <Button
@@ -87,12 +98,24 @@
             android:layout_height="wrap_content"
             android:text="button3"
             android:layout_margin="10dp"
+            android:layout_columnWeight="1"
             />
-
-
-
 
     </GridLayout>
 
 
-</LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+
+</FrameLayout>

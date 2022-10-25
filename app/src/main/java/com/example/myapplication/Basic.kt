@@ -630,7 +630,7 @@ Delegates :
 
 common code if want to use by all properties, delegate those properties using 'by'
 
-Lazy delegate :
+Lazy delegate :  remeber the frist vall and in all subsequent calls it will just output the remembered value
 
 observable delegate : two parameters; an initial value and a lambda. The lambda will be executed each time the value of the field is changed.
 

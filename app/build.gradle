@@ -1,3 +1,5 @@
+///Maven is just a tool that manages and simplifies how you build your project. and Plugins are extension to that maven
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
